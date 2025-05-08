@@ -54,7 +54,7 @@ header nav ul li a:hover {
 
 .banner {
     background-image: url('dcy.jpg');
-    background-size: auto;
+    background-size: cover;
     background-position: center;
 }
 
