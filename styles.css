@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #003366;
+    background-color: #778ba5;
     color: #fff;
     padding: 5px 0;
     text-align: center;
@@ -133,7 +133,7 @@ li {
 
 
 button {
-    background-color: #003366;
+    background-color: #778ba5;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -175,7 +175,7 @@ form input, form textarea {
 form button {
     margin-top: 20px;
     padding: 12px 24px;
-    background-color: #003366;
+    background-color: #778ba5;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -187,7 +187,7 @@ form button:hover {
 }
 
 footer {
-    background-color: #003366;
+    background-color: #778ba5;
     color: #fff;
     padding: 20px 0;
     text-align: center;
