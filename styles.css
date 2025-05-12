@@ -53,6 +53,7 @@ header nav ul li a:hover {
 }
 
 .banner {
+    background-image: url('blue.png');
     background-size: cover;
     background-position: center;
     color: #fff;
