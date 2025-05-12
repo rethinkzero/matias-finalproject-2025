@@ -131,6 +131,11 @@ li {
     background-color: #ffcc00; 
 }
 
+.feedback {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+}
 
 button {
     background-color: #778ba5;
