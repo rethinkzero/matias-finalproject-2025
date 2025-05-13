@@ -70,6 +70,10 @@ header nav ul li a:hover {
 .section {
     padding: 40px 20px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+}
 }
 
 h2 {
@@ -130,12 +134,6 @@ li {
 
 .submit-btn:hover {
     background-color: #ffcc00; 
-}
-
-.feedback {
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid;
 }
 
 button {
