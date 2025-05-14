@@ -14,7 +14,6 @@ body {
 header {
     background: linear-gradient(to right, #080808, #8b0000);
     color: white;
-    text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     text-align: center;
 }
@@ -48,7 +47,6 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #ffcc00;
 }
-
 
 .section {
     padding: 40px 20px;
@@ -98,7 +96,8 @@ h2 {
 }
 
 button, .submit-btn {
-    background-color: #722F37;
+    background: linear-gradient(to right, #080808, #8b0000);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -109,7 +108,7 @@ button, .submit-btn {
 }
 
 button:hover, .submit-btn:hover {
-    color: #ffcc00;
+    color: #ff0000;
     background-color: #2a2e2e;
 }
 
@@ -152,8 +151,9 @@ form textarea {
 }
 
 footer {
-    background-color: #722F37;
-    color: #fff;
+    background: linear-gradient(to right, #080808, #8b0000);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     padding: 20px 0;
     text-align: center;
     margin-top: 40px;
