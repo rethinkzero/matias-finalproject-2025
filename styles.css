@@ -7,71 +7,15 @@
 body {
     font-family: 'Times New Roman', serif;
     line-height: 1.6;
-    background-color: #221B18; 
-    color: #D8C4B8;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: #382F2D; 
-    color: #D8C4B8;
+    background-color: #353839;
+    color: #fff;
     padding: 5px 0;
     text-align: center;
-
-  background-image: 
-        linear-gradient(rgba(56, 47, 45, 0.9), 
-        rgba(56, 47, 45, 0.9)),
-        url('https://www.transparenttextures.com/patterns/black-paper.png');
-}
-
-header nav ul li a {
-    color: #D8C4B8;
-}
-
-header nav ul li a:hover {
-    color: #9B7E6B;
-}
-
-.banner {
-    background-image: url('semi_black.png');
-    background-color: #3A3226; 
-    color: #D8C4B8;
-}
-
-.product {
-    background-color: #382F2D;
-    color: #D8C4B8;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.product img {
-    filter: sepia(15%) brightness(95%) contrast(105%);
-}
-
-button, .submit-btn {
-    background-color: #6B4E3B; 
-    color: #D8C4B8;
-}
-
-button:hover, .submit-btn:hover {
-    background-color: #9B7E6B; 
-    color: #221B18;
-}
-
-.testimonial {
-    background-color: #3A3226;
-    color: #D8C4B8;
-}
-
-form input, 
-form textarea {
-    background-color: #382F2D;
-    color: #D8C4B8;
-    border: 1px solid #6B4E3B;
-}
-
-footer {
-    background-color: #382F2D;
-    color: #D8C4B8;
 }
 
 header nav {
@@ -91,9 +35,56 @@ header nav ul li {
     margin: 0 20px;
 }
 
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.banner {
+    background-image: url('semi_black.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
 .banner-text h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+}
+
+.banner-text p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.product-category {
+    margin-bottom: 40px;
+}
+
+.product-category h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
 .products {
@@ -103,6 +94,20 @@ header nav ul li {
     flex-wrap: wrap;
 }
 
+.product {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .product img {
     width: 200px;
     height: 200px;
@@ -110,9 +115,66 @@ header nav ul li {
     border-radius: 10px;
 }
 
+button, .submit-btn {
+    background-color: #353839;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
 
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-    }
+button:hover, .submit-btn:hover {
+    color: #ffcc00;
+    background-color: #2a2e2e;
+}
+
+.testimonial {
+    background-color: #eaeaea;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+    align-self: flex-start;
+    width: 300px;
+}
+
+form input, 
+form textarea {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+footer {
+    background-color: #353839;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
 }
