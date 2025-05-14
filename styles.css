@@ -1,112 +1,118 @@
-:root {
-  --primary: #382F2D;    
-  --secondary: #6B4E3B;  
-  --accent: #9B7E6B;     
-  --text: #D8C4B8;       
-  --background: #221B18; 
-  --texture: url('https://www.transparenttextures.com/patterns/black-paper.png');
-}
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Times New Roman', serif;
-  line-height: 1.6;
-  background: 
-    linear-gradient(rgba(34, 27, 24, 0.95), 
-    rgba(34, 27, 24, 0.95)),
-    var(--texture);
-  color: var(--text);
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    background-color: #221B18; 
+    color: #D8C4B8;
 }
 
 header {
-  background: 
-    linear-gradient(rgba(56, 47, 45, 0.9), 
-    rgba(56, 47, 45, 0.9)),
-    var(--texture);
-  color: var(--text);
-  padding: 20px 0;
-  text-align: center;
-  border-bottom: 2px solid var(--accent);
+    background-color: #382F2D; 
+    color: #D8C4B8;
+    padding: 5px 0;
+    text-align: center;
+
+  background-image: 
+        linear-gradient(rgba(56, 47, 45, 0.9), 
+        rgba(56, 47, 45, 0.9)),
+        url('https://www.transparenttextures.com/patterns/black-paper.png');
 }
 
-.product img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  filter: 
-    sepia(30%) 
-    brightness(90%) 
-    contrast(110%);
-  transition: filter 0.3s ease;
+header nav ul li a {
+    color: #D8C4B8;
 }
 
-.product:hover img {
-  filter: 
-    sepia(20%) 
-    brightness(95%) 
-    contrast(105%);
+header nav ul li a:hover {
+    color: #9B7E6B;
 }
 
-button {
-  background: var(--secondary);
-  color: var(--text);
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 10px;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.banner {
+    background-image: url('semi_black.png');
+    background-color: #3A3226; 
+    color: #D8C4B8;
 }
 
 .product {
-  background: 
-    linear-gradient(rgba(56, 47, 45, 0.8), 
-    rgba(56, 47, 45, 0.8)),
-    var(--texture);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-left: 3px solid var(--accent);
+    background-color: #382F2D;
+    color: #D8C4B8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    filter: sepia(15%) brightness(95%) contrast(105%);
+}
+
+button, .submit-btn {
+    background-color: #6B4E3B; 
+    color: #D8C4B8;
+}
+
+button:hover, .submit-btn:hover {
+    background-color: #9B7E6B; 
+    color: #221B18;
 }
 
 .testimonial {
-  background: 
-    linear-gradient(rgba(107, 78, 59, 0.2), 
-    rgba(107, 78, 59, 0.2)),
-    var(--texture);
-  padding: 20px;
-  margin: 10px;
-  border-radius: 8px;
-  border-top: 1px solid var(--accent);
+    background-color: #3A3226;
+    color: #D8C4B8;
+}
+
+form input, 
+form textarea {
+    background-color: #382F2D;
+    color: #D8C4B8;
+    border: 1px solid #6B4E3B;
 }
 
 footer {
-  background: var(--primary);
-  color: var(--text);
-  padding: 20px 0;
-  text-align: center;
-  margin-top: 40px;
-  border-top: 2px solid var(--accent);
+    background-color: #382F2D;
+    color: #D8C4B8;
 }
 
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+.banner-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
 @media (max-width: 768px) {
-  .products {
-    grid-template-columns: 1fr;
-  }
-  
-  header nav ul {
-    flex-direction: column;
-  }
+    header nav ul {
+        flex-direction: column;
+    }
 }
