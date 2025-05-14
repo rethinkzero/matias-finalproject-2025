@@ -1,3 +1,4 @@
+/* ===== RESET & BASE STYLES ===== */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ body {
     color: #333;
 }
 
+/* ===== HEADER & NAVIGATION ===== */
 header {
     background-color: #353839;
     color: #fff;
@@ -20,18 +22,18 @@ header {
 
 header nav {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
 }
 
 header nav ul {
     display: flex;
     padding: 0;
     margin: 0;
+    list-style-type: none;
 }
 
 header nav ul li {
-    list-style-type: none;
     margin: 0 20px;
 }
 
@@ -41,24 +43,21 @@ header nav ul li a {
     font-weight: bold;
     font-size: 18px;
     display: inline-block;
+    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
     color: #ffcc00;
 }
 
-.section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
+/* ===== BANNER SECTION ===== */
 .banner {
     background-image: url('semi_black.png');
     background-size: cover;
     background-position: center;
     color: #fff;
-    padding: 0px 0px;
-    margin: 0px 0px;
+    padding: 0;
+    margin: 0;
     text-align: center;
 }
 
@@ -72,6 +71,7 @@ header nav ul li a:hover {
     margin-top: 20px;
 }
 
+/* ===== COMMON SECTION STYLES ===== */
 .section {
     padding: 40px 20px;
     text-align: center;
@@ -82,6 +82,7 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* ===== PRODUCT SECTIONS ===== */
 .product-category {
     margin-bottom: 40px;
 }
@@ -104,6 +105,12 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .product img {
@@ -113,31 +120,8 @@ h2 {
     border-radius: 10px;
 }
 
-ul {
-    list-style-type: none; 
-    padding-left: 0; 
-    margin-left: 0; 
-}
-
-li {
-    padding-left: 0;
-}
-
-.submit-btn {
-    background-color: #4b3f31; 
-    color: white;
-    padding: 10px 20px; 
-    font-size: 16px; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-}
-
-.submit-btn:hover {
-    background-color: #ffcc00; 
-}
-
-button {
+/* ===== BUTTON STYLES ===== */
+button, .submit-btn {
     background-color: #353839;
     color: #fff;
     border: none;
@@ -145,55 +129,61 @@ button {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 10px;
+    transition: all 0.3s ease;
 }
 
-button:hover {
+button:hover, .submit-btn:hover {
     color: #ffcc00;
+    background-color: #2a2e2e;
 }
 
+/* ===== TESTIMONIALS SECTION ===== */
 .testimonial {
     background-color: #eaeaea;
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* ===== CONTACT FORM ===== */
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 form label {
     margin-top: 10px;
     font-weight: bold;
+    align-self: flex-start;
+    width: 300px;
 }
 
-form input, form textarea {
-    width: 300px;
+form input, 
+form textarea {
+    width: 100%;
+    max-width: 300px;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-form button {
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #353839;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+form textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
-form button:hover {
-    color: #ffcc00;
-}
-
+/* ===== FOOTER ===== */
 footer {
     background-color: #353839;
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    margin-top: 40px;
 }
