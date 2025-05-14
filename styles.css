@@ -12,9 +12,10 @@ body {
 }
 
 header {
-    background-color: #722F37;
-    color: #fff;
-    padding: 5px 0;
+    background: linear-gradient(to right, #080808, #8b0000);
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     text-align: center;
 }
 
