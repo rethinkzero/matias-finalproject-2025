@@ -152,12 +152,10 @@ form {
 form label {
     margin-top: 10px;
     font-weight: bold;
-    align-self: flex-start;
     width: 300px;
 }
 
-form input, 
-form textarea {
+form input, form textarea {
     width: 100%;
     max-width: 300px;
     padding: 10px;
