@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #353839;
+    background-color: #722F37;
     color: #fff;
     padding: 5px 0;
     text-align: center;
@@ -116,7 +116,7 @@ h2 {
 }
 
 button, .submit-btn {
-    background-color: #353839;
+    background-color: #722F37;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -170,7 +170,7 @@ form textarea {
 }
 
 footer {
-    background-color: #353839;
+    background-color: #722F37;
     color: #fff;
     padding: 20px 0;
     text-align: center;
