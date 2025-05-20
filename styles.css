@@ -158,3 +158,72 @@ footer {
     text-align: center;
     margin-top: 40px;
 }
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #8b0000;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#cart-icon {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#cart-count {
+    background: #8b0000;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 14px;
+    position: relative;
+    top: -10px;
+}
+
+#cart-dropdown {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 300px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #8b0000;
+}
+
+.rating {
+    color: gold;
+    font-size: 14px;
+}
+
+.rating span {
+    color: #777;
+    font-size: 12px;
+}
