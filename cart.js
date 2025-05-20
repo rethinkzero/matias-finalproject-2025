@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Cart toggle
     document.getElementById('cart-icon').addEventListener('click', () => {
         const dropdown = document.getElementById('cart-dropdown');
         dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
