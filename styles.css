@@ -227,3 +227,48 @@ footer {
     color: #777;
     font-size: 12px;
 }
+
+/* Add these styles to your existing CSS */
+#cart-items h4 {
+    color: #8b0000;
+    margin: 5px 0;
+}
+
+.cart-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-item-name {
+    color: #8b0000;
+    font-weight: bold;
+}
+
+.cart-item-price {
+    color: #080808;
+}
+
+.cart-total {
+    font-weight: bold;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #8b0000;
+}
+
+#checkout-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: linear-gradient(to right, #080808, #8b0000);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#checkout-btn:hover {
+    opacity: 0.9;
+}
