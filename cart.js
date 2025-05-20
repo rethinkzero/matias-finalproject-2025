@@ -1,32 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cart = [];
     
-    document.querySelectorAll('.add-to-cart').forEach(button => {
+    document.querySelectorAll('.add-to-cart, .product button:not([target="_blank"])').forEach(button => {
         button.addEventListener('click', (e) => {
+            e.preventDefault();
             const product = e.target.closest('.product');
             const name = product.querySelector('h4').textContent;
-            const price = parseFloat(product.dataset.price);
+            const priceText = product.querySelector('.price').textContent;
+            const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
             
             cart.push({ name, price });
             updateCart();
             
+            const originalText = button.textContent;
             button.textContent = '✓ Added!';
             button.style.backgroundColor = '#4CAF50';
             
             setTimeout(() => {
-                button.textContent = 'Add to Cart';
+                button.textContent = originalText;
                 button.style.backgroundColor = '';
             }, 1500);
         });
     });
     
-    document.getElementById('cart-icon').addEventListener('click', () => {
+    document.getElementById('cart-icon').addEventListener('click', (e) => {
+        e.stopPropagation();
         const dropdown = document.getElementById('cart-dropdown');
         dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
     });
     
+    document.addEventListener('click', () => {
+        document.getElementById('cart-dropdown').style.display = 'none';
+    });
+    
     document.getElementById('checkout-btn').addEventListener('click', () => {
-        alert('Checkout complete!');
+        if (cart.length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+        alert(`Checkout complete! Total: $${calculateTotal().toFixed(2)}`);
         cart.length = 0;
         updateCart();
     });
@@ -52,12 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
             total += item.price;
             itemsContainer.innerHTML += `
                 <div class="cart-item">
-                    <p>${item.name}</p>
-                    <p>$${item.price.toFixed(2)}</p>
+                    <span class="cart-item-name">${item.name}</span>
+                    <span class="cart-item-price">$${item.price.toFixed(2)}</span>
                 </div>
             `;
         });
         
         totalElement.textContent = total.toFixed(2);
+    }
+    
+    function calculateTotal() {
+        return cart.reduce((sum, item) => sum + item.price, 0);
     }
 });
