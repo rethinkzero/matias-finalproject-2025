@@ -67,6 +67,10 @@ h2 {
     margin-bottom: 10px;
 }
 
+.product h4 {
+    color: #8b0000;
+}
+
 .products {
     display: flex;
     justify-content: center;
