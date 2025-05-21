@@ -232,7 +232,6 @@ footer {
     font-size: 12px;
 }
 
-/* Add these styles to your existing CSS */
 #cart-items h4 {
     color: #8b0000;
     margin: 5px 0;
@@ -255,6 +254,7 @@ footer {
 }
 
 .cart-total {
+    color: #8b0000;
     font-weight: bold;
     margin-top: 15px;
     padding-top: 15px;
@@ -279,7 +279,7 @@ footer {
 
 .remove-item {
     background: #ff0000;
-    color: white;
+    color: #8b0000;
     border: none;
     border-radius: 50%;
     width: 20px;
