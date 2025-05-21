@@ -50,25 +50,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     }, 1200);
     
-    function updateCart() {
+      function updateCart() {
         const count = document.getElementById('cart-count');
         const itemsContainer = document.getElementById('cart-items');
         const totalElement = document.getElementById('cart-total');
-        
+    
         count.textContent = cart.length;
-        
+    
         itemsContainer.innerHTML = '';
         let total = 0;
-        
-        cart.forEach(item => {
+    
+        cart.forEach((item, index) => {
             total += item.price;
             itemsContainer.innerHTML += `
                 <div class="cart-item">
                     <span class="cart-item-name">${item.name}</span>
                     <span class="cart-item-price">$${item.price.toFixed(2)}</span>
+                    <button class="remove-item" data-index="${index}">×</button>
                 </div>
             `;
         });
+    
+    document.querySelectorAll('.remove-item').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const index = parseInt(e.target.getAttribute('data-index'));
+            cart.splice(index, 1);
+            updateCart();
+        });
+    });
+    
+    totalElement.textContent = total.toFixed(2);
+}
         
         totalElement.textContent = total.toFixed(2);
     }
