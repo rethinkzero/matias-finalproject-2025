@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     }, 1200);
     
-      function updateCart() {
+    function updateCart() {
         const count = document.getElementById('cart-count');
         const itemsContainer = document.getElementById('cart-items');
         const totalElement = document.getElementById('cart-total');
@@ -71,17 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         });
     
-    document.querySelectorAll('.remove-item').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const index = parseInt(e.target.getAttribute('data-index'));
-            cart.splice(index, 1);
-            updateCart();
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const index = parseInt(e.target.getAttribute('data-index'));
+                cart.splice(index, 1);
+                updateCart();
+            });
         });
-    });
     
-    totalElement.textContent = total.toFixed(2);
-}
-        
         totalElement.textContent = total.toFixed(2);
     }
     
